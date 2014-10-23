@@ -1,0 +1,32 @@
+---
+layout: post-index
+permalink: /portfolio/
+title: Portfolio Items
+description: "A list of work examples"
+---
+
+{% for item in site.portfolio %}
+    {% capture this_year %}{{ item.date | date: "%Y" }}{% endcapture %}
+    {% capture next_year %}{{ item.previous.date | date: "%Y" }}{% endcapture %}
+
+    {% if forloop.first %}
+    <article>
+      <h2 id="{{ this_year }}-ref">{{ this_year }}</h2>
+      <ul>
+    {% endif %}
+
+        <li class="entry-title"><a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a></li>
+
+    {% if forloop.last %}
+      </ul>
+    </article>
+    {% else %}
+        {% if this_year != next_year %}
+          </ul>
+        </article>
+        <article>
+          <h2 id="{{ next_year }}-ref">{{next_year}}</h2>
+          <ul>
+        {% endif %}
+    {% endif %}
+{% endfor %}
