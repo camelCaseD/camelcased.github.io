@@ -15,6 +15,24 @@ avatar: https://avatars0.githubusercontent.com/u/1644022?v=2&s=80
 # Flags below are optional
 #
 
+owner:
+  name:           Brnadon B.
+  avatar:         https://avatars0.githubusercontent.com/u/1644022?v=2&s=80
+  bio:            "A student from Oregon that enjoys creating web sites and mobile apps. Also has a strange interest in 中文."
+  email:          brandon@camelcased.com
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        
+  facebook:       
+  github:         
+  stackexchange:  
+  linkedin:       
+  instagram:      
+  flickr:         
+  tumblr:         
+  # For Google Authorship https://plus.google.com/authorship
+  # google plus id, include the '+', eg +mmistakes
+  google_plus:    +Brandon
+
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble: 
