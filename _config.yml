@@ -35,20 +35,6 @@ owner:
   # google plus id, include the '+', eg +mmistakes
   google_plus:    102637121249122278016
 
-# Includes an icon in the footer for each username you enter
-footer-links:
-  dribbble: 
-  email: 
-  facebook: 
-  flickr: 
-  github: barryclark/jekyll-now
-  instagram: 
-  linkedin: 
-  pinterest: 
-  rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
-  twitter: jekyllrb
-  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-
 # Your disqus shortname, entering this will enable commenting on posts
 disqus: 
 
@@ -64,6 +50,9 @@ url:
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
+
+collections:
+  - portfolio
 
 #
 # !! You don't need to change any of the configuration flags below !!
@@ -92,6 +81,3 @@ exclude:
     - Gemfile.lock
     - LICENSE
     - README.md
-
-collections:
-  - portfolio
