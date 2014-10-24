@@ -52,7 +52,8 @@ url: "http://www.camelcased.com"
 baseurl: ""
 
 collections:
-  - projects
+  projects:
+    permalink: /project/:title/
 
 #
 # !! You don't need to change any of the configuration flags below !!
