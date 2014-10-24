@@ -5,7 +5,7 @@ title: Portfolio Items
 description: "A list of work examples"
 ---
 
-{% for project in site.projects %}
+{% for project in site.project %}
     {% capture this_year %}{{ project.date | date: "%Y" }}{% endcapture %}
     {% capture next_year %}{{ project.previous.date | date: "%Y" }}{% endcapture %}
 
