@@ -52,7 +52,6 @@ url: "http://www.camelcased.com"
 baseurl: ""
 
 collections:
-  - portfolio
   - project
 
 #
