@@ -1,5 +1,4 @@
 ---
-layout: project
 title: BOCINC
 date: 2014-10-22
 ---
