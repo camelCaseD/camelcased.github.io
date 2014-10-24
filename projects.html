@@ -18,7 +18,9 @@ image:
       <h2 id="{{ this_year }}-ref">{{ this_year }}</h2>
       <ul>
     {% endif %}
-
+        {% for document in project.docs %}
+          <h6>{{ document.content }}</h6>
+        {% endfor %}
         <li class="entry-title"><a href="{{ site.url }}{{ project.url }}" title="{{ project.title }}">{{ project.title }}</a></li>
 
     {% if forloop.last %}
