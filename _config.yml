@@ -52,7 +52,7 @@ url: "http://www.camelcased.com"
 baseurl: ""
 
 collections:
-  - project
+  - projects
 
 #
 # !! You don't need to change any of the configuration flags below !!
