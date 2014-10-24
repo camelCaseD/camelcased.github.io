@@ -5,10 +5,8 @@ title: Portfolio Items
 description: "A list of work examples"
 ---
 
-
-
 {% for collection in site.collections %}
     <ul>
-        <li>{{ collection.relative_directory }}</li>
+        <li>{{ collection }}</li>
     </ul>
 {% endfor %}
