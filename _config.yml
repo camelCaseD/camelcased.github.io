@@ -35,6 +35,10 @@ owner:
   # google plus id, include the '+', eg +mmistakes
   google_plus:    102637121249122278016
 
+links:
+  - title: Portfolio
+    url: /portfolio
+
 # Your disqus shortname, entering this will enable commenting on posts
 disqus: 
 
