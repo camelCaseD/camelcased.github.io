@@ -24,13 +24,5 @@ image:
     {% if forloop.last %}
       </ul>
     </article>
-    {% else %}
-        {% if this_year != next_year %}
-          </ul>
-        </article>
-        <article>
-          <h2 id="{{ next_year }}-ref">{{next_year}}</h2>
-          <ul>
-        {% endif %}
     {% endif %}
 {% endfor %}
