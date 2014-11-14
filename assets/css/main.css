@@ -5304,3 +5304,8 @@ body {
   color: #222222;
   background-color: #ffffff;
 }
+
+.entry-title span.summary {
+  color: #aaa;
+  font-size: 12px;
+}
