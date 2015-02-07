@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Kabum Coffee
+date: 2014-10-26
 summary: A mobile app for Android that displayed info about individual farmers.
 ---
 
