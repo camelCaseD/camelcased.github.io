@@ -9,14 +9,9 @@ image:
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
-{% capture index %}0{% endcapture %}
 {% for project in site.projects %}
-    {% capture this_year %}{{ project.date | date: "%Y" }}{% endcapture %}
-    {% capture next_year %}{{ site.projects[index - 1].date | date: "%Y" }}{% endcapture %}
-
     {% if forloop.first %}
     <article>
-      <h2 id="{{ this_year }}-ref">{{ this_year }}</h2>
       <ul>
     {% endif %}
         <li class="entry-title"><a href="{{ site.url }}{{ project.url }}" title="{{ project.title }}">{{ project.title }}</a><span class="summary">{{ project.summary }}</span></li>
@@ -25,6 +20,4 @@ image:
       </ul>
     </article>
     {% endif %}
-    
-    {% capture index %}{{ index + 1}}{% endcapture %}
 {% endfor %}
