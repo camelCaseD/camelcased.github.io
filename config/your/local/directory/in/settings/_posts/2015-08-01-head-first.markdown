@@ -1,0 +1,3 @@
+August has finally begun, which means it is time for me to finish my preparations. As I am going to be going head first into a completely new world in which I will be madly typing away at my computer to solve the latest problem my instructor has given. As I ask myself is this semicolon suppose to go here or there and weather or not my solution even makes sense to myself. It will all be worth it because I will get to be fully immersed in an industry I truly have a passion for.
+
+Starting from the top I am 18 years old and I just graduated from high school this past June in a small mountain town where there was only about 500 students at my high school.
