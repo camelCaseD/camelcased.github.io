@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Objective-c
+title: Objective-c wildcard property listener
 date: 2015-10-20 13:40:00 +0000
 summary: Listening for property changes on all properties in a class
 ---
