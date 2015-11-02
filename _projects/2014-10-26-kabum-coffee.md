@@ -2,7 +2,7 @@
 layout: project
 title: Kabum Coffee
 date: 2014-10-26 00:00:00 +0000
-summary: A mobile app for Android that displayed info about individual farmers.
+summary: A mobile app for Android that displayed info about individual farmers in Kabum Coffee.
 ---
 
 [Kabum Coffee Interantional](http://kabum.org) is a company with the goal of rewarding farmers that produce quality coffee beans to help them overcome poverty.
