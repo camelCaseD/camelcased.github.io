@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Oasis (A coming soon page)
+title: Oasis
 date: 2014-10-27 00:00:00 +0000
 summary: A coming soon page that emualted an AI post recovery-boot.
 ---
