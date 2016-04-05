@@ -1,37 +1,16 @@
 <template>
   <div class="app">
     <div class="container">
-      <Page>
-        <div>
-          <img src="/images/logo.jpg" />
-
-          <header>
-            <p>Noun: An alias representing the phrase "Camel Case Developer"</p>
-          </header>
-        </div>
-      </Page>
-
-      <Page>
-        <div>
-          <div class="profile"></div>
-
-          <header>
-            <p class="small">
-              I am a self-taught software engineer since I was about 11 years old.
-            </p>
-          </header>
-        </div>
-      </Page>
+      <header>
+        <img src="/images/logo.jpg" />
+      </header>
     </div>
   </div>
 </template>
 
 <script>
-  import Page from './components/Page.vue'
-
   export default {
     components: {
-      Page
     }
   }
 </script>
@@ -56,6 +35,10 @@
         margin-left: auto;
         margin-right: auto;
         opacity: 0.9;
+      }
+
+      header img {
+        width: 25%;
       }
     }
 
