@@ -1,60 +1,13 @@
 <template>
   <div id="grid">
-    <div class="item">
-      <img src="/images/profile.jpg" />
+    <template v-for="item in items">
+      <div @click="enlarge(item)"  class="item">
+        <img :src="item.image" />
 
-      <h1>camelCaseD?</h1>
-      <p>I am a self-taught software engineer since I was 11 years old.</p>
-    </div>
-    
-    <div class="item">
-      <img src="/images/profile.jpg" />
-
-      <h1>Title</h1>
-      <p>Summary</p>
-    </div>
-    
-    <div class="item">
-      <img src="/images/profile.jpg" />
-
-      <h1>Title</h1>
-      <p>Summary</p>
-    </div>
-    
-    <div class="item">
-      <img src="/images/profile.jpg" />
-
-      <h1>Title</h1>
-      <p>Summary</p>
-    </div>
-    
-    <div class="item">
-      <img src="/images/profile.jpg" />
-
-      <h1>Title</h1>
-      <p>Summary</p>
-    </div>
-    
-    <div class="item">
-      <img src="/images/profile.jpg" />
-
-      <h1>Title</h1>
-      <p>Summary</p>
-    </div>
-    
-    <div class="item">
-      <img src="/images/profile.jpg" />
-
-      <h1>Title</h1>
-      <p>Summary</p>
-    </div>
-    
-    <div class="item">
-      <img src="/images/profile.jpg" />
-
-      <h1>Title</h1>
-      <p>Summary</p>
-    </div>
+        <h1>{{ item.title }}</h1>
+        <p>{{ item.summary }}</p>
+      </div>
+    </template>
   </div>
 </template>
 
@@ -103,7 +56,22 @@
 <script>
 
   export default {
-    created: function () {
+    data: function () {
+      return {
+        items: []
+      };
+    },
+
+    ready: function () {
+      this.$http({url: 'https://api.github.com/gists/dc204ef991491acc002881aa95da61c8', methid: 'GET'}).then(function (response) {
+        this.$set('items', JSON.parse(response.data.files['items.json'].content).items);
+      });
+    },
+
+    methods: {
+      enlarge: function (item) {
+        this.$router.go(item.link);
+      }
     }
   }
 </script>

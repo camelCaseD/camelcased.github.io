@@ -15,23 +15,9 @@
 <script>
   import Grid from './components/Grid.vue'
 
-  import VueRouter from 'vue-router'
-
   export default {
     components: {
       Grid
-    },
-
-    created: function () {
-      let router = new VueRouter();
-
-      router.map({
-        '/grid/:item': {
-          component: {}
-        }
-      });
-
-      router.start(Grid, '#grid');
     }
   }
 </script>
