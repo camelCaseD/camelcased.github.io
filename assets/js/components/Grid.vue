@@ -2,7 +2,7 @@
   <div id="grid">
     <template v-for="(index, item) in items">
       <div @click="enlarge(index, item)"  class="item">
-        <img :src="item.image" />
+        <div class="image" :style="{backgroundImage: 'url(\'' + item.image + '\')'}"></div>
 
         <h1>{{ item.title }}</h1>
         <p>{{ item.summary }}</p>
@@ -26,16 +26,19 @@
       display: inline-block;
       position: relative;
       
-      &:hover img {
+      &:hover div.image {
         filter: grayscale(0%);
         transition: filter 0.4s linear;
       }
 
-      img {
+      div.image {
         width: 100%;
         height: 100%;
         filter: grayscale(100%);
         transition: filter 0.4s linear;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center left;
       }
 
       h1, p {
