@@ -1,7 +1,7 @@
 <template>
   <div id="grid">
     <template v-for="(index, item) in items">
-      <div @click="enlarge(index, item)"  class="item">
+      <div @click="enlarge(index)"  class="item">
         <div class="image" :style="{backgroundImage: 'url(\'' + item.image + '\')'}"></div>
 
         <h1>{{ item.title }}</h1>
@@ -76,7 +76,7 @@
     },
 
     methods: {
-      enlarge: function (index, item) {
+      enlarge: function (index) {
         this.$router.go('/grid/' + index);
       }
     }
