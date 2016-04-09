@@ -43,6 +43,7 @@
 
       h1, p {
         left: 2.5%;
+        text-shadow: 1px 1px 2px black;
       }
 
       h1 {
@@ -55,6 +56,7 @@
         margin: 0;
         position: absolute;
         top: 50%;
+        font-size: 18px;
       }
     }
   }

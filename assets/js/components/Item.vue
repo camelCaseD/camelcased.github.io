@@ -47,6 +47,7 @@
         font-size: 30px;
         color: white;
         cursor: pointer;
+        text-shadow: 1px 1px 2px black;
       }
     }
   }
