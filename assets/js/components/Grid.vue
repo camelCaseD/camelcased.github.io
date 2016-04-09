@@ -21,7 +21,7 @@
 
     .item {
       width: 24%;
-      height: 35%;
+      height: 50%;
       cursor: pointer;
       display: inline-block;
       position: relative;

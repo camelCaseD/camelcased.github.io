@@ -2,6 +2,8 @@
   <div class="item">
     <h1>{{ item.title }}</h1>
     <p>{{ item.body }}</p>
+
+    <button @click="shrink">x</button>
   </div> 
 </template>
 
@@ -11,16 +13,19 @@
       position: absolute;
       left: 0;
       top: 0;
-      width: 100%;
-      height: 100%;
       z-index: 1;
       cursor: default;
       background-repeat: no-repeat;
       background-size: cover;
 
-      &.animate {
-        width: 24%;
+      &.enlarge {
         animation-name: enlarge;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+      }
+      
+      &.shrink {
+        animation-name: shrink;
         animation-duration: 1s;
         animation-timing-function: linear;
       }
@@ -30,6 +35,16 @@
         height: 100%;
         top: 0 !important;
         left: 0 !important;
+      }
+
+      button {
+        right: 10px;
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
       }
     }
   }
@@ -46,6 +61,20 @@
       left: 0;
     }
   }
+
+  @keyframes shrink {
+    from {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    to {
+      width: 24%;
+      height: 50%;
+    }
+  }
 </style>
 
 <script>
@@ -57,7 +86,9 @@
     },
 
     methods: {
-      loadData: function (data) {
+      loadData: function (data, animate) {
+        animate = animate !== false ? true : animate;
+
         var index = parseInt(this.$route.params.item);
 
         this.$set('item', data[index]);
@@ -70,11 +101,30 @@
 
         this.$el.style.backgroundImage = "url('" + this.item.image + "')";
 
-        this.$el.classList.add('animate');
+        if (animate) {
+          this.enlarge();
+        } else {
+          this.$el.classList.add('final');
+        }
+      },
+
+      enlarge: function () {
+        this.$el.classList.add('enlarge');
 
         setTimeout(() => {
-          this.$el.classList.remove('aniamte');
+          this.$el.classList.remove('enlarge');
           this.$el.classList.add('final');
+        }, 1000);
+      },
+
+      shrink: function () {
+        this.$el.classList.add('shrink');
+
+        setTimeout(() => {
+          this.$el.classList.remove('final');
+          this.$el.classList.remove('shrink');
+
+          this.$router.go('/');
         }, 1000);
       }
     },
@@ -82,14 +132,16 @@
     ready: function () {
       if (this.$parent.items.length === 0) {
         this.$parent.$watch('items', (newVal) => {
-          this.loadData(newVal);
+          this.loadData(newVal, false);
         });
       } else {
         this.loadData(this.$parent.items);
       }
 
       this.$router.afterEach(() => {
-        this.loadData(this.$parent.items);
+        if (this.$route.path !== '/') {
+          this.loadData(this.$parent.items);
+        }
       });
     }
   }
