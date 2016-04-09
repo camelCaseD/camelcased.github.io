@@ -119,14 +119,6 @@
       shrink: function () {
         this.$el.classList.add('shrink');
         this.$el.classList.remove('final');
-
-        setTimeout(() => {
-          this.$el.style.display = 'none';
-
-          this.$el.classList.remove('shrink');
-
-          this.$router.go('/');
-        }, 1000);
       }
     },
 
@@ -149,6 +141,12 @@
         if (event.animationName === 'enlarge') {
           this.$el.classList.add('final');
           this.$el.classList.remove('enlarge');
+        } else if (event.animationName === 'shrink') {
+          this.$el.style.display = 'none';
+
+          this.$el.classList.remove('shrink');
+
+          this.$router.go('/');
         }
       });
     }
