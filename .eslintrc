@@ -153,7 +153,7 @@
     "prefer-const": 0,
     "quote-props": 0,
     "quotes": [2, "single", "avoid-escape"],
-    "radix": 2,
+    "radix": 0,
     "semi": [0, "never"],
     "semi-spacing": 0,
     "sort-vars": 0,
