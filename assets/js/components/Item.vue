@@ -80,6 +80,8 @@
 </style>
 
 <script>
+  import helpers from '../helpers';
+
   export default {
     data: function () {
       return {
@@ -112,11 +114,6 @@
 
       enlarge: function () {
         this.$el.classList.add('enlarge');
-        this.$el.classList.add('final');
-
-        setTimeout(() => {
-          this.$el.classList.remove('enlarge');
-        }, 1000);
       },
 
       shrink: function () {
@@ -145,6 +142,13 @@
       this.$router.afterEach(() => {
         if (this.$route.path !== '/') {
           this.loadData(this.$parent.items);
+        }
+      });
+
+      this.$el.addEventListener(helpers.whichAnimationEvent(), (event) => {
+        if (event.animationName === 'enlarge') {
+          this.$el.classList.add('final');
+          this.$el.classList.remove('enlarge');
         }
       });
     }
