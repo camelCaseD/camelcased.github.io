@@ -1,6 +1,14 @@
 <template>
   <div class="item">
-    <h1>{{ item.title }}</h1>
+    <h1>
+      <a :href="item.link" v-show="item.link">
+        {{ item.title }}
+        <i class="material-icons">launch</i>
+      </a>
+
+      <span v-show="!item.link">{{ item.title }}</span>
+    </h1>
+
     <p>{{ item.body }}</p>
 
     <button @click="shrink">x</button>

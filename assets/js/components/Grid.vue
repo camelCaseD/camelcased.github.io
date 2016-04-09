@@ -1,10 +1,18 @@
 <template>
   <div id="grid">
     <template v-for="(index, item) in items">
-      <div @click="enlarge(index)"  class="item">
+      <div @click="enlarge(index, $event)"  class="item">
         <div class="image" :style="{backgroundImage: 'url(\'' + item.image + '\')'}"></div>
 
-        <h1>{{ item.title }}</h1>
+        <h1>
+          <a :href="item.link" v-show="item.link">
+            {{ item.title }}
+            <i class="material-icons">launch</i>
+          </a>
+
+          <span v-show="!item.link">{{ item.title }}</span>
+        </h1>
+
         <p>{{ item.summary }}</p>
       </div>
     </template>
@@ -41,6 +49,11 @@
         background-position: center left;
       }
 
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
       h1, p {
         left: 2.5%;
         text-shadow: 1px 1px 2px black;
@@ -50,6 +63,13 @@
         margin: 0;
         position: absolute;
         top: 25%;
+
+        i {
+          font-size: 14px;
+          position: relative;
+          top: 2px;
+          right: 5px;
+        }
       }
 
       p {
@@ -78,8 +98,10 @@
     },
 
     methods: {
-      enlarge: function (index) {
-        this.$router.go('/grid/' + index);
+      enlarge: function (index, event) {
+        if (event.target.tagName !== 'A') {
+          this.$router.go('/grid/' + index);
+        }
       }
     }
   }
