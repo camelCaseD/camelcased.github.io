@@ -34,7 +34,7 @@
 
       &.final {
         width: 100%;
-        height: 100%;
+        height: 105%;
         top: 0 !important;
         left: 0 !important;
       }
@@ -58,7 +58,7 @@
 
     to {
       width: 100%;
-      height: 100%;
+      height: 105%;
       top: 0;
       left: 0;
     }
@@ -67,7 +67,7 @@
   @keyframes shrink {
     from {
       width: 100%;
-      height: 100%;
+      height: 105%;
       top: 0;
       left: 0;
     }
@@ -97,11 +97,9 @@
 
         this.$set('item', data[index]);
 
-        var divider = index > 4 ? 2 : 1;
-        this.$el.style.left = index * 24 / divider + '%';
+        this.$el.style.left = (index > 3 ? index - 4 : index) * 24 + '%';
 
-        var multiplier = index > 4 ? 2 : 0;
-        this.$el.style.top = 35 * multiplier + '%';
+        this.$el.style.top = (index > 3 ? 50 : 0) + '%';
 
         this.$el.style.backgroundImage = "url('" + this.item.image + "')";
 
