@@ -8,6 +8,8 @@
 </template>
 
 <style lang="sass" scoped>
+  $animation-time: 0.7s;
+
   #grid {
     .item {
       position: absolute;
@@ -20,13 +22,13 @@
 
       &.enlarge {
         animation-name: enlarge;
-        animation-duration: 1s;
+        animation-duration: $animation-time;
         animation-timing-function: linear;
       }
       
       &.shrink {
         animation-name: shrink;
-        animation-duration: 1s;
+        animation-duration: $animation-time;
         animation-timing-function: linear;
       }
 
@@ -110,18 +112,20 @@
 
       enlarge: function () {
         this.$el.classList.add('enlarge');
+        this.$el.classList.add('final');
 
         setTimeout(() => {
           this.$el.classList.remove('enlarge');
-          this.$el.classList.add('final');
         }, 1000);
       },
 
       shrink: function () {
         this.$el.classList.add('shrink');
+        this.$el.classList.remove('final');
 
         setTimeout(() => {
-          this.$el.classList.remove('final');
+          this.$el.style.display = 'none';
+
           this.$el.classList.remove('shrink');
 
           this.$router.go('/');
