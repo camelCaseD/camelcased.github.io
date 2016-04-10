@@ -99,7 +99,7 @@
 
     methods: {
       enlarge: function (index, event) {
-        if (event.target.tagName !== 'A') {
+        if (event.target.tagName !== 'A' && event.target.tagName !== 'I') {
           this.$router.go('/grid/' + index);
         }
       }
