@@ -79,6 +79,7 @@
 
         p {
           text-align: center;
+          font-size: 12px;
         }
 
         nav {
