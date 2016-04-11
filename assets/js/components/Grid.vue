@@ -34,6 +34,7 @@
       cursor: pointer;
       display: inline-block;
       position: relative;
+      overflow: auto;
       
       &:hover div.image {
         filter: grayscale(0%);
@@ -79,6 +80,7 @@
         top: 50%;
         font-size: 18px;
         text-align: left;
+        text-overflow: clip;
       }
     }
   }
