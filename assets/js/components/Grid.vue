@@ -26,6 +26,7 @@
     margin-top: 5%;
     height: 470px;
     position: relative;
+    text-align: center;
 
     .item {
       width: 24%;
@@ -77,6 +78,7 @@
         position: absolute;
         top: 50%;
         font-size: 18px;
+        text-align: left;
       }
     }
   }

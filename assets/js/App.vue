@@ -8,6 +8,30 @@
       <Grid>
         <router-view></router-view>
       </Grid>
+
+      <footer>
+        <nav>
+          <ul>
+            <li>
+              <a href="https://linkedin.com/in/camelcased"><img src="/images/linkedin.svg" /></a>
+            </li>
+            
+            <li>
+              <a href="https://github.com/camelCaseD"><img src="/images/github.svg" /></a>
+            </li>
+            
+            <li>
+              <a href="https://vimeo.com/camelcased"><img src="/images/vimeo.svg" /></a>
+            </li>
+            
+            <li>
+              <a href="skype:camelCaseD?userinfo"><img src="/images/skype.svg" /></a>
+            </li>
+          </ul>
+        </nav>
+
+        <p>All contents &copy; 2016 camelCaseD, Brandon Borders</p>
+      </footer>
     </div>
   </div>
 </template>
@@ -47,6 +71,34 @@
       header img {
         width: 25%;
         margin-top: 20px;
+      }
+
+      footer {
+        position: relative;
+        top: 40px;
+
+        p {
+          text-align: center;
+        }
+
+        nav {
+          img {
+            width: 20px;
+          }
+
+          ul {
+            list-style-type: none;
+            width: 95px;
+            padding: 0;
+            margin: 0 auto;
+
+            li {
+              display: inline-block;
+              margin: 0;
+              padding: 0;
+            }
+          }
+        }
       }
     }
 
