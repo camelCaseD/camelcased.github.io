@@ -12,6 +12,8 @@
     <p>{{ item.body }}</p>
 
     <button @click="shrink">x</button>
+
+    <div class="overlay"></div>
   </div> 
 </template>
 
@@ -45,6 +47,15 @@
         height: 105%;
         top: 0 !important;
         left: 0 !important;
+      }
+
+      .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.2;
+        position: relative;
+        z-index: -1;
       }
 
       button {
