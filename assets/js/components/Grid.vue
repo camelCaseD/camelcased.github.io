@@ -34,7 +34,7 @@
       cursor: pointer;
       display: inline-block;
       position: relative;
-      overflow: auto;
+      overflow: hidden;
       
       &:hover div.image {
         filter: grayscale(0%);
