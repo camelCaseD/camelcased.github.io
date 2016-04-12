@@ -47,6 +47,57 @@
 </script>
 
 <style lang="sass" scoped>
+  @media (max-width: 1332px) {
+    .app {
+      .container {
+        width: 90% !important;
+      }
+    }
+  }
+  
+  @media (max-width: 1090px) {
+    .app {
+      .container {
+        width: 100% !important;
+      }
+    }
+  }
+
+  @media (max-width: 932px) {
+    .app {
+      .container {
+        header {
+          img {
+            width: 50% !important;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+          }
+        }
+
+        footer {
+          top: 970px !important;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 503px) {
+    .app {
+      .container {
+        header {
+          img {
+            width: 100% !important;
+          }
+        }
+
+        footer {
+          top: 2860px !important;
+        }
+      }
+    }
+  }
+
   .app {
     width: 100%;
     height: 100%;

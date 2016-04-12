@@ -7,3 +7,9 @@ html, body {
   background-color: #1F1E1C;
   overflow: hidden;
 }
+
+@media (max-width: 932px) {
+  body {
+    overflow-y: scroll;
+  }
+}

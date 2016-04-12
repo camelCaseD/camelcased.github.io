@@ -20,6 +20,26 @@
 <style lang="sass" scoped>
   $animation-time: 0.7s;
 
+  @media (max-width: 932px) {
+    #grid {
+      .item {
+        &.final {
+          height: 1889px !important;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 503px) {
+    #grid {
+      .item {
+        &.final {
+          height: 3781px !important;
+        }
+      }
+    }
+  }
+
   #grid {
     .item {
       position: absolute;
@@ -43,7 +63,7 @@
       }
 
       &.final {
-        width: 100%;
+        width: 100% !important;
         height: 105%;
         top: 0 !important;
         left: 0 !important;
@@ -117,7 +137,7 @@
 
         this.$set('item', data[index]);
 
-        this.$el.style.left = (index > 3 ? index - 4 : index) * 24 + '%';
+        this.$el.style.left = (index > 3 ? index - 4 : index) * this.cellWidth() + '%';
 
         this.$el.style.top = (index > 3 ? 50 : 0) + '%';
 
@@ -137,6 +157,22 @@
       shrink: function () {
         this.$el.classList.add('shrink');
         this.$el.classList.remove('final');
+      },
+
+      viewportWidth: function () {
+        return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+      },
+
+      cellWidth: function () {
+        var width = this.viewportWidth();
+
+        if (width >= 933) {
+          return 24;
+        } else if (width >= 504) {
+          return 48;
+        } else {
+          return 0;
+        }
       }
     },
 

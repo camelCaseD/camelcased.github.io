@@ -22,6 +22,24 @@
 </template>
 
 <style lang="sass">
+  @media (max-width: 932px) {
+    #grid {
+      height: 940px !important;
+
+      .item {
+        width: 48% !important;
+      }
+    }
+  }
+
+  @media (max-width: 503px) {
+    #grid {
+      .item {
+        width: 100% !important;
+      }
+    }
+  }
+
   #grid {
     margin-top: 5%;
     height: 470px;
