@@ -2,7 +2,7 @@
   <div class="app">
     <div class="container">
       <header>
-        <img src="/images/logo.jpg" />
+        <amp-img src="/images/logo.jpg" layout="fixed" width="252px" height="61px"></amp-img>
       </header>
 
       <Grid>
@@ -13,19 +13,27 @@
         <nav>
           <ul>
             <li>
-              <a href="https://linkedin.com/in/camelcased"><img src="/images/linkedin.svg" /></a>
+              <a href="https://linkedin.com/in/camelcased">
+                <amp-img src="/images/linkedin.svg" layout="fixed" width="20px" height="20px"></amp-img>
+              </a>
             </li>
             
             <li>
-              <a href="https://github.com/camelCaseD"><img src="/images/github.svg" /></a>
+              <a href="https://github.com/camelCaseD">
+                <amp-img src="/images/github.svg" layout="fixed" width="20px" height="20px"></amp-img>
+              </a>
             </li>
             
             <li>
-              <a href="https://vimeo.com/camelcased"><img src="/images/vimeo.svg" /></a>
+              <a href="https://vimeo.com/camelcased">
+                <amp-img src="/images/vimeo.svg" layout="fixed" width="20px" height="20px"></amp-img>
+              </a>
             </li>
             
             <li>
-              <a href="skype:camelCaseD?userinfo"><img src="/images/skype.svg" /></a>
+              <a href="skype:camelCaseD?userinfo">
+                <amp-img src="/images/skype.svg" layout="fixed" width="20px" height="20px"></amp-img>
+              </a>
             </li>
           </ul>
         </nav>
