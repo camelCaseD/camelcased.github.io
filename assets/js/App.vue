@@ -38,7 +38,7 @@
           </ul>
         </nav>
 
-        <p>All contents &copy; 2017 camelCaseD, Brandon Borders</p>
+        <p>All contents &copy; {{ year }} camelCaseD, Brandon Borders</p>
       </footer>
     </div>
   </div>
@@ -50,6 +50,14 @@
   export default {
     components: {
       Grid
+    },
+
+    computed: {
+      year: function () {
+        const date = new Date();
+
+        return date.getFullYear();
+      }
     }
   }
 </script>
