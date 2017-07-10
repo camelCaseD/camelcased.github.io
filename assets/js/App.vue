@@ -38,7 +38,7 @@
           </ul>
         </nav>
 
-        <p>All contents &copy; 2016 camelCaseD, Brandon Borders</p>
+        <p>All contents &copy; 2017 camelCaseD, Brandon Borders</p>
       </footer>
     </div>
   </div>
